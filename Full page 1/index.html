@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
 </head>
 <body>
-  
 
 <header>
   <div class="header">
@@ -21,27 +20,31 @@
       </div>
     </div>
   </div>
-
-  <nav>
-    <div class="wrapper">
-      <p class="hamburger center">&#9776; Menu</p>
-      <ul class="nav-menu">
-        <li><a href="">About</a></li>
-        <li><a href="">Courses</a></li>
-        <li><a href="">Blog</a></li>
-        <li><a href="">Student Success</a></li>
-        <li><a href="">Instructors</a></li>
-        <li><a href="">Reviews</a></li>
-        <li><a href="">Contact Us</a></li>
-      </ul>
-    </div>
-  </nav>
 </header>
+
+<nav style="position: sticky; top: 0; z-index: 2">
+  <div class="wrapper full-wrapper">
+    <p class="hamburger center">&#9776; Menu</p>
+    <ul class="nav-menu">
+      <li><a href="">About</a></li>
+      <li><a href="">Courses</a></li>
+      <li><a href="">Blog</a></li>
+      <li><a href="">Student Success</a></li>
+      <li><a href="">Instructors</a></li>
+      <li><a href="">Reviews</a></li>
+      <li><a href="">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+
 
 <main>
   <section class="showcase">
+    <div id="img-slider-pr" class="center img-slider-control">&lt;</div>
+    <div id="img-slider-ne" class="center img-slider-control">&gt;</div>
     <div class="showcase-n" id='showcase-1'>
-      <div class="border border-1 wrapper-2">
+      <div class="border wrapper-2" id="border-1">
         <h2>Headline 1</h2>
         <p>Text 1 - Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
         <a class="showcase-btn" href="#course-list">Learn more &#10142;</a>
@@ -49,7 +52,7 @@
     </div>
 
     <div class="showcase-n" id="showcase-2">
-      <div class="border border-2 wrapper-2">
+      <div class="border wrapper-2" id="border-2">
         <h2>Headline 2</h2>
         <p>Text 2 - Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         <a class="showcase-btn" href="#course-list">Learn more &#10142;</a>
@@ -57,7 +60,7 @@
     </div>
 
     <div class="showcase-n" id="showcase-3">
-      <div class="border border-3 wrapper-2">
+      <div class="border wrapper-2" id="border-3">
         <h2>Headline 3</h2>
         <p>Text 3 - Lorem ipsum dolor sit amet, consectetur.</p>
         <a class="showcase-btn" href="#course-list">Learn more &#10142;</a>
@@ -204,5 +207,6 @@
 </footer>
 
 
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

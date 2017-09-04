@@ -38,6 +38,10 @@ a {
 	box-sizing: border-box;
 }
 
+.full-wrapper {
+	width: 100%;
+}
+
 .wrapper-2 {
 	width: 90%;
 	max-width: 635px;
@@ -46,11 +50,9 @@ a {
 	box-sizing: border-box;
 }
 
-
 /* HEADER */
 
 header {
-	overflow: hidden;
 	background-color: #152A34;
 	color: #fff;
 }
@@ -82,6 +84,7 @@ header hr {
 
 nav {
 	background-color:rgb(25, 51, 63);
+	color: #fff;
 }
 
 .hamburger {
@@ -89,15 +92,19 @@ nav {
 	height: 35px;
 	border-bottom: 1px solid  #152A34;
 	width: 100%;
+	cursor: pointer;
 }
 
 .nav-menu {
-	display: none;
+	height: 0;
 	width: 100%;
 	list-style: none;
 	text-align: left;
 	text-transform: uppercase;
+	transition: 0.8s;
+	overflow: hidden;
 }
+
 
 .nav-menu li {
 	border-bottom: 1px solid  #152A34;
@@ -108,11 +115,12 @@ nav {
 	display: block;
 	line-height: 35px;
 	transition: 0.1s;
+	padding-left: 7%;
 }
 
 .nav-menu a:hover {
 	color: #fff;
-	background-color: orange;
+	background-color: rgb(226, 126, 72);
 }
 
 
@@ -121,16 +129,44 @@ nav {
 /* SHOWCASE */
 
 .showcase {
-	height: calc(100vh - 132px);
+	background-color: #000;
+	position: relative;
 }
 
-#showcase-2, #showcase-3 {
-    display: none;
+.img-slider-control {
+	position: absolute;
+	top: 50%;
+	bottom: 50%;
+	z-index: 3;
+	background-color:  #152A34;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	text-align: center;
+	vertical-align: center;
+	font-size: 2rem;
+	color: white;
+	cursor: pointer;
+	outline: none;
+}
+
+.img-slider-control:hover, .img-slider-control:active, .img-slider-control:focus {
+	color: rgb(226, 126, 72);
+	/*background-color: rgb(25, 51, 63);*/
+}
+
+#img-slider-pr {
+	left: 2px;
+}
+
+#img-slider-ne {
+	right: 2px;
 }
 
 .showcase-n {
 	display: flex;
 	height: 100%;
+	height: calc(100vh - 132px);
 	align-items: center;
 	justify-content: center;
 	background-size: cover;
@@ -141,10 +177,19 @@ nav {
 
 #showcase-1 {
 	background-image: url('../img/img1.jpeg');
+	transition: background-image 2s;
 }
 
 #showcase-2 {
 	background-image: url('../img/img2.jpeg');
+}
+
+#showcase-3 {
+	background-image: url('../img/img3.jpeg');
+}
+
+#showcase-2, #showcase-3 {
+    display: none;
 }
 
 .border {
@@ -197,7 +242,7 @@ nav {
 }
 
 .course-list h2:nth-child(1) {
-	color: orange;
+	color: rgb(226, 126, 72);
 }
 
 .course-list h2:nth-child(2) {
@@ -244,7 +289,7 @@ nav {
 }
 
 .course a {
-	color: orange;
+	color: rgb(226, 126, 72);
 	font-size: 1.3rem;
 }
 
@@ -291,7 +336,7 @@ nav {
 	height: 30px;
 	line-height: 30px;
 	text-align: center;
-	background-color: #152A34;
+	background-color: rgb(25, 51, 63);
 	color: #bbb;
 
 }
@@ -309,7 +354,7 @@ nav {
 }
 
 .testimonial a {
-	color: orange;
+	color: rgb(226, 126, 72);
 	font-size: 1.3rem;
 	margin-bottom: 0;
 	display: block;
@@ -425,8 +470,24 @@ footer {
 
 
 
+/* JAVASCRIPT-USE CLASSES */
+
+.show {
+	height: 252px;
+}
+
+.displayFlex {
+	display: flex !important;
+}
+
+.hideDisplay {
+	display: none !important;
+}
+
+
 /* HEADER SPLITS IN TWO */
 @media (min-width: 600px) {
+
 	.header .center {
 		flex-flow: row;	
 		justify-content: space-between;
@@ -445,12 +506,16 @@ footer {
 
 /* Multi-columns at 800px+ */
 @media (min-width: 800px) {
+	.full-wrapper {
+		width: 90%;
+	}
+
 	.hamburger {
 		display: none;
 	}
 
 	.nav-menu {
-		display: block;
+		height: initial;
 	}
 
 	.nav-menu li {
@@ -461,8 +526,22 @@ footer {
 		padding: 0.5rem 0.5rem;
 	}
 
-	.showcase {
+	.showcase-n {
 		height: calc(100vh - 148px);
+	}
+
+	.img-slider-control {
+		font-size: 3rem;
+		width: 50px;
+		height: 50px;
+	}
+
+	#img-slider-pr {
+		left: 1rem;
+	}
+
+	#img-slider-ne {
+		right: 1rem;
 	}
 
 	.course-container {
@@ -511,3 +590,5 @@ footer {
 		flex-basis: 100%;
 	}
 }
+
+
