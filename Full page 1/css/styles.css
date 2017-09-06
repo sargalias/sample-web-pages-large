@@ -316,12 +316,23 @@ nav {
 
 .box-wrapper {
 	padding: 3rem 0;
+	position: relative;
 }
 
 .box {
 	border: 2px solid #fff;
 	padding: 2rem;
 	position: relative;
+	text-align: center;
+}
+
+.box-slider-control {
+	position: absolute;
+	top: 15%;
+	z-index: 3;
+	color: rgb(226, 126, 72);
+	font-size: 1.3rem; /* change */
+	cursor: pointer;
 }
 
 .testimonial span {
@@ -338,7 +349,6 @@ nav {
 	text-align: center;
 	background-color: rgb(25, 51, 63);
 	color: #bbb;
-
 }
 
 .testimonial h3 {
@@ -362,8 +372,24 @@ nav {
 	text-decoration: none;
 }
 
+.testimonial a:hover, .testimonial a:focus, .testimonial a:active {
+	color: #fff;
+}
+
 #box-2, #box-3 {
 	display: none;
+}
+
+.box-slider-control:hover, .box-slider-control:focus, .box-slider-control:active {
+	color: #fff;
+}
+
+#box-slider-pr {
+	left: 10px;
+}
+
+#box-slider-ne {
+	right: 10px;
 }
 
 
@@ -480,6 +506,10 @@ footer {
 	display: flex !important;
 }
 
+.displayBlock {
+	display: block !important;
+}
+
 .hideDisplay {
 	display: none !important;
 }
@@ -501,6 +531,14 @@ footer {
 		border-left: 1px solid rgb(226, 126, 72);
 		border-right: 1px solid rgb(226, 126, 72);
 		padding: 0 1rem;
+	}
+
+	#box-slider-pr {
+		left: 30px;
+	}
+
+	#box-slider-ne {
+		right: 30px;
 	}
 }
 
