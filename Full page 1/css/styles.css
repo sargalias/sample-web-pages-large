@@ -176,16 +176,16 @@ nav {
 }
 
 #showcase-1 {
-	background-image: url('../img/img1.jpeg');
+	background-image: url('../img/img1-500w.jpg');
 	transition: background-image 2s;
 }
 
 #showcase-2 {
-	background-image: url('../img/img2.jpeg');
+	background-image: url('../img/img2-500w.jpg');
 }
 
 #showcase-3 {
-	background-image: url('../img/img3.jpeg');
+	background-image: url('../img/img3-500w.jpg');
 }
 
 #showcase-2, #showcase-3 {
@@ -516,6 +516,19 @@ footer {
 
 
 /* HEADER SPLITS IN TWO */
+
+@media (mid-width: 500px) {
+	#showcase-1 {
+		background-image: url('../img/img1-768w.jpg');
+	}
+	#showcase-2 {
+		background-image: url('../img/img2-768w.jpg');
+	}
+	#showcase-3 {
+		background-image: url('../img/img3-768w.jpg');
+	}
+}
+
 @media (min-width: 600px) {
 
 	.header .center {
@@ -566,6 +579,16 @@ footer {
 
 	.showcase-n {
 		height: calc(100vh - 148px);
+	}
+
+	#showcase-1 {
+		background-image: url('../img/img1-1000w.jpg');
+	}
+	#showcase-2 {
+		background-image: url('../img/img2-1000w.jpg');
+	}
+	#showcase-3 {
+		background-image: url('../img/img3-1000w.jpg');
 	}
 
 	.img-slider-control {
@@ -629,4 +652,16 @@ footer {
 	}
 }
 
+@media (min-width: 1000px) {
+	#showcase-1 {
+		background-image: url('../img/img1-1400w.jpg');
+	}
+	#showcase-2 {
+		background-image: url('../img/img2-1400w.jpg');
+	}
+	#showcase-3 {
+		background-image: url('../img/img3-1400w.jpg');
+	}
+
+}
 
