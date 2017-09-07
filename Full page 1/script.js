@@ -1,11 +1,11 @@
 
 // disable links as they don't go to any real pages.
-let links = document.getElementsByTagName('a');
-for (let i=0; i<links.length; i++) {
-    links[i].addEventListener('click', (e) => {
-        e.preventDefault();
-    });
-}
+// let links = document.getElementsByTagName('a');
+// for (let i=0; i<links.length; i++) {
+//     links[i].addEventListener('click', (e) => {
+//         e.preventDefault();
+//     });
+// }
 
 /* HAMBURGER MENU */
 

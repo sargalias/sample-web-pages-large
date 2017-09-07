@@ -1,3 +1,10 @@
+.border a {
+	display: block;
+	position: relative;
+	top: -50px;
+	visibility: hidden;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -152,7 +159,6 @@ nav {
 
 .img-slider-control:hover, .img-slider-control:active, .img-slider-control:focus {
 	color: rgb(226, 126, 72);
-	/*background-color: rgb(25, 51, 63);*/
 }
 
 #img-slider-pr {
@@ -166,7 +172,7 @@ nav {
 .showcase-n {
 	display: flex;
 	height: 100%;
-	height: calc(100vh - 132px);
+	height: calc(100vh - 226px);
 	align-items: center;
 	justify-content: center;
 	background-size: cover;
@@ -517,7 +523,19 @@ footer {
 
 /* HEADER SPLITS IN TWO */
 
-@media (mid-width: 500px) {
+@media (orientation: portrait) {
+	#showcase-1 {
+		background-image: url('../img/img1-vert-500h.jpg');
+	}
+	#showcase-2 {
+		background-image: url('../img/img2-vert-500h.jpg');
+	}
+	#showcase-3 {
+		background-image: url('../img/img3-vert-500h.jpg');
+	}
+}
+
+@media (min-width: 500px) {
 	#showcase-1 {
 		background-image: url('../img/img1-768w.jpg');
 	}
@@ -529,12 +547,28 @@ footer {
 	}
 }
 
+@media (min-width: 500px) and (orientation: portrait) {
+	#showcase-1 {
+		background-image: url('../img/img1-vert-768h.jpg');
+	}
+	#showcase-2 {
+		background-image: url('../img/img2-vert-768h.jpg');
+	}
+	#showcase-3 {
+		background-image: url('../img/img3-vert-768h.jpg');
+	}
+}
+
 @media (min-width: 600px) {
 
 	.header .center {
 		flex-flow: row;	
 		justify-content: space-between;
 	}	
+
+	.showcase-n {
+		height: calc(100vh - 132px);
+	}
 
 	.header hr {
 		display: none;
@@ -652,6 +686,19 @@ footer {
 	}
 }
 
+
+@media (min-width: 768px) and (orientation: portrait) {
+	#showcase-1 {
+		background-image: url('../img/img1-vert-1000h.jpg');
+	}
+	#showcase-2 {
+		background-image: url('../img/img2-vert-1000h.jpg');
+	}
+	#showcase-3 {
+		background-image: url('../img/img3-vert-1000h.jpg');
+	}
+}
+
 @media (min-width: 1000px) {
 	#showcase-1 {
 		background-image: url('../img/img1-1400w.jpg');
@@ -665,3 +712,14 @@ footer {
 
 }
 
+@media (min-width: 1000px) and (orientation: portrait) {
+	#showcase-1 {
+		background-image: url('../img/img1-vert-1400h.jpg');
+	}
+	#showcase-2 {
+		background-image: url('../img/img2-vert-1400h.jpg');
+	}
+	#showcase-3 {
+		background-image: url('../img/img3-vert-1400h.jpg');
+	}
+}
