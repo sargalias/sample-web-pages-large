@@ -172,6 +172,8 @@ nav {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	position: relative;
+	min-height: 400px;
+	overflow: hidden;
 }
 
 #showcase-1 {
