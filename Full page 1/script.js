@@ -1,11 +1,11 @@
 
 // disable links as they don't go to any real pages.
-// let links = document.getElementsByTagName('a');
-// for (let i=0; i<links.length; i++) {
-//     links[i].addEventListener('click', (e) => {
-//         e.preventDefault();
-//     });
-// }
+let links = document.getElementsByTagName('a');
+for (let i=0; i<links.length; i++) {
+    links[i].addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+}
 
 /* HAMBURGER MENU */
 
@@ -93,7 +93,8 @@ function changeImg(direction) {
     change(direction, imageTransitionTime, 'showcase', 0, numOfImgs, 'hideDisplay', 'displayFlex');
 }
 
-fadeIn(document.querySelector(`#showcase-${counters[0]+1}`), imageTransitionTime, opacityInterval, 'hideDisplay', 'displayFlex');
+fadeIn(document.querySelector(`#showcase-${counters[0]+1}`), imageTransitionTime*4, 0.005, 'hideDisplay', 'displayFlex');
+    // large first image transition to account for it loading.
 let imgSlider = setInterval(() => {
     changeImg();
     }, imgShowTime+imageTransitionTime);
